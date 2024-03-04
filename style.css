@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  background: #f4c405;
+}
+
+.wrapper,
+label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+#box:checked ~ label {
+  left: 90%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.wrapper label {
+  z-index: 1;
+  transition: 0.4s ease-in;
+  -webkit-transition: 0.4s ease-in;
+  -moz-transition: 0.4s ease-in;
+  -ms-transition: 0.4s ease-in;
+  -o-transition: 0.4s ease-in;
+}
+
+.wrapper label #button {
+  background-color: #262626;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+label #button i {
+  color: #f9f9f9;
+  transition: transform 0.2s linear;
+  margin: auto;
+  font-size: 30px;
+  -webkit-transition: transform 0.2s linear;
+  -moz-transition: transform 0.2s linear;
+  -ms-transition: transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+}
+
+#button:checked ~ label #button i::before {
+  content: "\f00d";
+}
+
+.wrapper .navs {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #f9f9f9;
+  padding: 0 60px 0 0;
+  border-radius: 50px;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -webkit-transition: transform 0.4s ease-in;
+  -moz-transition: transform 0.4s ease-in;
+  -ms-transition: transform 0.4s ease-in;
+  -o-transition: transform 0.4s ease-in;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#box:checked ~ .navs {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+.navs ul {
+  list-style: none;
+  display: flex;
+  padding: 20px 5px;
+}
+
+.navs ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: #262626;
+  font-size: 15px;
+  margin: 0 10px;
+  padding: 10px 20px;
+}
+
+#box {
+  display: none;
+}
+.navs ul li a:hover {
+  background-color: #262626;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  color: #fff;
+}
